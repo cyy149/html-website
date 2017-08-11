@@ -1,0 +1,61 @@
+/*footer.css
+底部的样式
+*/
+
+/*-----------------------------------------------------底部导航链接部分*/
+.links ul.linknav{
+	height: 20px;
+	background: #f9f9f9;
+}
+.links ul.linknav li{
+	float: left;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	border:1px solid #ddd;
+	padding:0 15px;
+	margin-left:-1px; /*让当前的块状元素把左边的元素覆盖1个px*/
+}
+.links  div{
+	padding:10px 15px;
+	border:1px solid #ddd;
+	margin-top:-1px;
+}
+.links  div a{
+	display: inline-block;
+	margin:5px 10px;
+}
+.footer1{
+	padding:20px 0;
+	height: 160px;
+}
+.footer1 dl{
+	height: 160px;
+	width: 18%;
+	float:left;
+}
+.footer1 dl dt{
+	font-size: 16px;
+	font-weight: bold;
+	color:#333;
+	height: 40px
+}
+.footer1 dl dd{
+	height: 20px;
+	line-height: 20px;
+}
+.footer1 div{
+	border-left:1px solid #ddd;
+	height: 160px;
+	width: 27%;
+	float:left;
+	/*padding-left:25px;*/
+	/*background: red;*/
+}
+.icon-server{
+	background:url("../images/icon-customer-service.png") no-repeat;
+	width: 50px;
+	height: 20px; /*文字的高度*/
+	padding-top: 50px; /*为给图片留空间*/
+	display: inline-block;
+}

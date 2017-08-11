@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>主页</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<style>
+		.nav{
+			height: 520px;
+			/*background: #2bb8aa;*/
+		}
+		.categroy{
+			height:40px;
+			width: 245px;
+			background: red;
+			height:40px;
+			line-height: 40px;
+			text-align: center;
+			color:#fff;
+			position: relative;
+		}
+		.categroybox{
+			position:absolute;
+			left:0;
+			top:40px;
+			width: 245px;
+			border-left:1px solid #ccc;
+			border-bottom:1px solid #ccc;
+			background: #fbfbfb;
+		}	
+		.cateitem{
+			height: 52px;
+			line-height: 52px;
+		}
+		.cateitem:hover{
+			background: #ccc;
+		}
+		.itemlevel1{
+			margin-left: 20px;
+			height: 51px;
+			/*background: red;*/
+			border-bottom: 1px solid #ddd;
+			border-right:1px solid #ddd;
+			padding-right: 20px;
+
+		}
+		.itemlevel1 a{
+			display: inline-block;
+		}
+		.on .itemlevel2{
+			display: block;
+		}
+		.on .itemlevel1{
+			border-right: 1px solid transparent;
+		}
+		.itemlevel2{
+			height:480px;
+			position: absolute;
+			top:0;
+			left:245px;
+			background: #fff;
+			white-space: nowrap;
+			padding-left:20px;
+			display: none;
+			border-right: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+		}
+
+		.itemlevel2 dl{
+			display: inline-block;
+			margin-right: 20px;
+		}
+		.itemlevel2 dl dt{
+			height: 50px;
+			line-height: 50px;
+		}
+		.itemlevel2 dl dd{
+			height:25px;
+			line-height: 25px;
+			text-align: left;
+		}
+
+	</style>
+		
+</head>
+<body>
+	<div class="topbox">
+	<!-- 顶部的导航 -->
+		<div class="top sec1170">
+			<!-- <img src="slices/1.top.gif" alt=""> -->
+			<div class="basic fl">
+				<ul>
+					<li><a href=""><i class="collect"></i>收藏美团</a></li>
+					<li><a href="">登录</a></li>
+					<li><a href="">注册</a></li>
+					<li id="li1" class="toggleli">
+						<a class="togglea" href="">
+							<i class="icon-phone"></i>
+							手机美团
+							<i class="icon-tri"></i>
+						</a>
+						<div class="togglemenu">
+							<div>
+								<a href="">免费下载手机美团</a>
+								<img src="images/weixin1.png" alt="">
+							</div>
+							<div>
+								<a href="">免费下载手机美团</a>
+								<img src="images/weixin1.png" alt="">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="user fr">
+				<ul>
+					<li><a href="">我的订单</a></li>
+					<li id="li2" class="toggleli on">
+						<a class="togglea" href="">
+							我的美团
+							<i class="icon-tri"></i>
+							<i class="vertical-line"></i>
+						</a>
+						<div class="togglemenu">
+							<ul>
+								<li><a href="">我的美团</a></li>
+								<li><a href="">我的订单</a></li>
+								<li><a href="">我的评价</a></li>
+								<li><a href="">我的收藏</a></li>
+								<li><a href="">我的积分</a></li>
+								<li><a href="">抵用券</a></li>
+								<li><a href="">余额</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="toggleli">
+						<a class="togglea" href="">
+						最近浏览
+						<i class="icon-tri"></i>
+						<i class="vertical-line"></i>
+
+						</a>
+						<div class="togglemenu">
+							最近浏览！
+						</div>
+					</li>
+					<li><a class="togglea" href="">购物车0件<i class="icon-tri"></i>
+							<i class="vertclass="togglea" ical-line"></i>
+							</a></li>
+					<li><a class="togglea" href="">联系客服<i class="icon-tri"></i>
+							<i class="vertical-line"></i>
+							</a></li>
+					<li><a class="togglea" href="">我是商家<i class="icon-tri"></i>
+							<i class="vertical-line"></i>
+							</a></li>
+					<li>
+						<a class="togglea" href="">
+						更多
+						<i class="icon-tri"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<!-- 顶部的导航 end -->
+	</div>
+
+	<div class="logo sec1170">
+		<div class="logobox fl">
+			<div class="logoimg fl">美团</div>
+			<div class="fl">
+				<h2>北京</h2>
+				<span>切换城市</span>
+			</div>
+		</div>
+		<div class="searchbox fl">
+			<form action="">
+				<div class="fl">团购</div>
+				<input class="fl" type="text">
+				<button>搜索</button>
+			</form>
+			<ul>
+				<li><a href="">蛋糕</a></li>
+				<li><a href="">自助餐</a></li>
+				<li><a href="">羊蝎子火锅</a></li>
+				<li><a href="">虾吃虾涮</a></li>
+				<li><a href="">比格烤肉</a></li>
+				<li><a href="">东来顺</a></li>
+				<li><a href="">火炉火</a></li>
+			</ul>
+		</div>
+		<div class="promise fr">
+			<a href=""><img src="images/icon-expire-big.png" alt=""><span>随时退</span></a>
+			<a href=""><img src="images/icon-expire-big.png" alt=""><span>随时退</span></a>
+			<a href=""><img src="images/icon-expire-big.png" alt=""><span>随时退</span></a>
+
+		</div>
+		
+	</div>
+	<div class="nav sec1170">
+		<div class="categroy">
+			<h2>全部</h2>
+			<ul class="categroybox">
+				<li class="cateitem on">
+					<div class="itemlevel1">
+						<a class="fl" href="">美食</a>
+						<span class="fr"><a href="">自助餐</a> <a href="">代金券</a></span>
+					</div>
+					<div class="itemlevel2">
+						<dl>
+							<dt><a href="">婚纱摄影</a></dt>
+							<dd><a href="">代金券</a></dd>
+							<dd><a href="">甜点饮品</a></dd>
+							<dd><a href="">火锅</a></dd>
+							<dd><a href="">自助</a></dd>
+							<dd><a href="">小吃快餐</a></dd>
+							<dd><a href="">日韩料理</a></dd>
+							<dd><a href="">西餐</a></dd>
+							<dd><a href="">聚餐宴请</a></dd>
+							<dd><a href="">烧烤烤肉</a></dd>
+							<dd><a href="">东北菜</a></dd>
+							<dd><a href="">川湘菜</a></dd>
+							<dd><a href="">小吃快餐</a></dd>
+							<dd><a href="">日韩料理</a></dd>
+							<dd><a href="">西餐</a></dd>
+							<dd><a href="">聚餐宴请</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="">个性写真</a></dt>
+							<dd><a href="">甜点饮品</a></dd>
+							<dd><a href="">火锅</a></dd>
+							<dd><a href="">自助</a></dd>
+							<dd><a href="">小吃快餐</a></dd>
+							<dd><a href="">日韩料理</a></dd>
+							<dd><a href="">西餐</a></dd>
+							<dd><a href="">聚餐宴请</a></dd>
+							<dd><a href="">烧烤烤肉</a></dd>
+							<dd><a href="">东北菜</a></dd>
+							<dd><a href="">川湘菜</a></dd>
+							<dd><a href="">小吃快餐</a></dd>
+							<dd><a href="">日韩料理</a></dd>
+							<dd><a href="">西餐</a></dd>
+							<dd><a href="">聚餐宴请</a></dd>
+							<dd><a href="">烧烤烤肉</a></dd>
+						</dl>
+					</div>
+				</li>
+				<li class="cateitem">
+					<div class="itemlevel1">
+						<a href="">
+							<span>美食</span>
+							<span>自助餐 代金券</span>
+						</a>
+					</div>
+				</li>
+				<li class="cateitem">
+					<div class="itemlevel1">
+						<a href="">
+							<span>美食</span>
+							<span>自助餐 代金券</span>
+						</a>
+					</div>
+				</li>
+				<li class="cateitem">
+					<div class="itemlevel1">
+						<a href="">
+							<span>美食</span>
+							<span>自助餐 代金券</span>
+						</a>
+					</div>
+				</li>
+				<li class="cateitem">
+					<div class="itemlevel1">
+						<a href="">
+							<span>美食</span>
+							<span>自助餐 代金券</span>
+						</a>
+					</div>
+				</li>
+				<li class="cateitem">
+					<div class="itemlevel1">
+						<a href="">
+							<span>美食</span>
+							<span>自助餐 代金券</span>
+						</a>
+					</div>
+				</li>
+				<li class="cateitem">
+					<div class="itemlevel1">
+						<a href="">
+							<span>美食</span>
+							<span>自助餐 代金券</span>
+						</a>
+					</div>
+				</li>
+				<li class="cateitem">
+					<div class="itemlevel1">
+						<a href="">
+							<span>美食</span>
+							<span>自助餐 代金券</span>
+						</a>
+					</div>
+				</li>
+				<li class="cateitem">
+					<div class="itemlevel1" style="border-bottom:none;">
+						<a href="">
+							<span>美食</span>
+							<span>自助餐 代金券</span>
+						</a>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+		
+		<!-- <img src="slices/3.nav.gif" alt=""> -->
+
+	</div>
+	<div class="famous sec1170">
+		<img src="slices/4.famous.gif" alt="">
+	</div>
+	<div class="food sec1170">
+		<img src="slices/5.food.gif" alt="">
+	</div>
+	<div class="amusement sec1170">
+		<img src="slices/6.amusement.gif" alt="">
+	</div>
+	<div class="movie sec1170">
+		<img src="slices/7.moive.gif" alt="">
+	</div>
+	<div class="hotel sec1170">
+		<img src="slices/8.hotal.gif" alt="">
+	</div>
+	<div class="life sec1170">
+		<img src="slices/9.life.gif" alt="">
+	</div>
+	<div class="shopping sec1170">
+		<img src="slices/10.shopping.gif" alt="">
+	</div>
+	<div class="beauty sec1170">
+		<img src="slices/11.beauty.gif" alt="">
+	</div>
+	<div class="travel sec1170">
+		<img src="slices/12.travel.gif" alt="">
+	</div>
+	<div class="links sec1170">
+		<img src="slices/13.links.gif" alt="">
+	</div>
+	<div class="footer1 sec1170">
+		<img src="slices/14.footer1.gif" alt="">
+	</div>
+	<div class="footer2 sec1170">
+		<img src="slices/14.footer2.gif" alt="">
+	</div>
+
+	<script src="js/index.js"></script>
+</body>
+</html>

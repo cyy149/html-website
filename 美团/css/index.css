@@ -1,0 +1,92 @@
+/*index.css*/
+
+.sectitle{		/*每一个栏目中的标题*/
+	height: 45px;
+	line-height:45px;
+	margin:10px 0;
+}
+.sectitle  h2{
+	background: url(../images/food-title.png) no-repeat;
+	width: 38px;
+	height: 30px;
+	padding-left:42px;
+
+}
+.sectitle li{
+	float: left;
+	margin:0 5px;
+}
+.itemlist{                         
+	border-top:1px solid #ddd;
+	border-left:1px solid #ddd;
+
+}
+.famous .itemlist {  /*整体的用来包含ul块的那个div*/
+	position: relative;
+	height:270px;
+}
+.famous ul{
+	position: absolute;
+	width: 4680px; /*(3+1)*1170;*/
+	height:270px;
+}
+.famous li{
+	display: inline-block;
+	overflow: hidden;
+}
+.food{
+/*			background: red;*/
+}
+.food img{
+	width: 260px;
+	height: 155px;
+}
+
+.famous img{
+	height: 125px;
+	width: 205px;
+}
+.famous .item{
+	padding:10px 13px 0px 14px;
+}
+/*------------------------倒计时*/
+.famous .timer{
+	position: relative;
+	padding-left:12px;
+	height: 42px;
+	width: 225px;
+	border:1px solid #ddd;
+	border-radius: 5px; /*圆角*/
+}
+.timer-bg-title{
+	width: 49px;
+	height: 28px;
+	background: url("../images/time-start.png") no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+.timer-bg{
+	width: 20px;
+	height: 28px;
+	background: url("../images/time-bg.png") no-repeat;
+	display: inline-block;
+	line-height: 28px;
+	text-align: center;
+	color:#fff;
+	font-size: 20px;
+	vertical-align: middle;
+}
+.icon-triout{
+	border: 6px solid transparent;
+    border-right-color: #ddd;
+    position: absolute;
+    top: 11px;
+    left: -13px;
+}
+.icon-triin{
+	border: 6px solid transparent;
+    border-right-color: #fff;
+    position: absolute;
+    top: -6px;
+    left: -5px;
+}

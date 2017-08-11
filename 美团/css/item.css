@@ -1,0 +1,80 @@
+.item{
+	float: left;
+	padding:10px 15px 0px;
+	border:1px solid #ddd;
+	margin-left:-1px;
+	margin-top:-1px;
+}
+.item img{
+	width: 260px;
+	height: 155px;
+}
+.item a{
+	text-decoration: none;
+}
+.item .imgbox{ /*用来装图片的a*/
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+}
+.item .imgbox .icon-item1{
+
+	position: absolute;
+    background: url(../images/base.png) 0 -449px no-repeat;
+    top: -7px;
+    left: 0;
+    width: 45px;
+    height: 44px;
+    display: inline-block;
+}
+.item .imgbox .icon-item2{
+	position: absolute;
+	background: url(../images/base.png) 0 -407px no-repeat;
+    top: -6px;
+    left: 42px;
+    width: 45px;
+    height: 40px;
+    display: inline-block;
+}
+.item .imgbox .icon-item3{
+
+	position: absolute;
+    background: url(../images/base.png) 0 -493px no-repeat;
+    top: -4px;
+    left: 85px;
+    width: 45px;
+    height: 40px;
+    display: inline-block;
+}
+.item .item-info{
+	display: inline-block;
+	
+	margin-bottom: 15px;
+}
+.item-extra{
+	height: 20px;
+	margin-bottom: 12px;
+}
+.item-sale{
+	height: 35px;
+	padding-top:10px;
+	border-top: 1px dotted #ddd;
+}
+.txt-sale{
+	display: inline-block;
+	padding:2px;
+	color:#fff;
+	background:#f76120;
+}
+.star-out{
+	background: url("../images/star.png");
+	width: 60px;
+	height: 12px;
+	display: inline-block;
+}
+.star-in{
+	background: url("../images/star-hover.png");
+	width: 30px;
+	height: 12px;
+	display: inline-block;
+}

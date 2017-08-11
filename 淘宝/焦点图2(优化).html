@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>焦点图2</title>
+	 <style>
+	 	*{margin:0;padding:0;}
+	 	ul,li{
+	 		list-style-type:none;
+	 	}
+	 	#banner2{
+	 		width: 520px;
+	 		height: 201px;
+	 		border: 4px solid red;
+	 		margin:100px auto 0;
+	 		overflow: hidden;
+			position: relative;
+	 	}
+	 	#banner2 ul{
+	 		width: 1000%;
+	 		height: 100%;
+	 		position:absolute;
+	 		left: 0%;
+	 		top: 0;
+	 	}
+	 	#banner2 ul li{
+	 		width: 10%;
+	 		float: left;
+	 		height: 100%;
+	 		overflow:hidden;
+	 		position: relative;
+	 	}
+	 	#banner2 ul li img{
+			position:absolute;
+			left: 50%;
+			top: 0;
+			margin-left: -260px;
+	 	}
+	 	#banner2 ol{
+	 		width: 78px;
+	 		height: 13px;
+	 		background-color: rgba(255,255,255,0.5);
+	 		position:absolute;
+	 		left: 50%;
+	 		bottom: 12px;
+	 		margin-left: -39px;
+	 		-webkit-border-radius:6px;
+	 		-ms-border-radius:6px;
+	 		-moz-border-radius:6px;
+	 		-o-border-radius:6px;
+	 		border-radius:6px;
+	 	}
+	 	#banner2 ol li{
+	 		width: 9px;
+	 		height: 9px;
+	 		margin: 2px;
+	 		float: left;
+	 		background-color:#b7b7b7;
+	 		-webkit-border-radius:50%;
+	 		-ms-border-radius:50%;
+	 		-moz-border-radius:50%;
+	 		-o-border-radius:50%;
+	 		border-radius:50%;
+	 		cursor:pointer;
+	 	}
+		#banner2 ol li.cur{
+			background-color: #f40;
+		}
+		#banner2 span{
+			width: 24px;
+			height: 36px;
+			position: absolute;
+			left: 0px;
+			top: 50%;
+			margin-top: -18px;
+			background-color: rgba(255,255,0,0.5);
+			color: white;
+			text-align:center;
+			line-height: 36px;
+			cursor:pointer;
+			display:none;
+		}
+		#banner2 span.right-btn{
+			right: 0;
+			left:auto;
+		}
+	 </style>
+	 <script src='jquery-1.11.3.min.js'></script>
+	 <script>
+	 	$(function(){
+	 		var idx=0;
+	 		var timer;
+	 		var $banner2_span = $('#banner2>span');
+	 		var $banner2_ul   = $('#banner2>ul');
+	 		var $banner2_ol_li= $('#banner2>ol>li');
+	 		//$banner2_ol_li.length=6;
+	 		//$banner2_ol_li.length-1=5;
+	 		//
+	 		//取第一个li复制添加到ul最后
+	 		$banner2_ul.children(':eq(0)').clone().appendTo($banner2_ul);
+
+	 		$('#banner2').mouseenter(function(){
+	 			$banner2_span.show();
+	 			clearInterval(timer);
+	 		});
+	 		$('#banner2').mouseleave(function(){
+	 			$banner2_span.hide();
+	 			timer=setInterval(function(e){
+	 			$banner2_span.eq(1).click();
+	 		},3000);
+	 		}).mouseleave();
+
+	 		//单击鼠标向后按钮时，播放下一张图片
+	 		$banner2_span.eq(1).bind('click',function(e){
+	 			if( $banner2_ul.is(':animated')==true ){
+	 				return;
+	 			}
+	 			idx++;
+	 			if( idx<=($banner2_ol_li.length-1) ){  //正常状态
+	 				//角标工作
+	 				$banner2_ol_li.eq(idx).addClass('cur').siblings().removeClass('cur');
+	 				//图片工作
+	 				$banner2_ul.animate({left:'-'+idx+'00%'},1000);
+	 			}else if(idx>( $banner2_ol_li.length-1) ){		//idx>5，
+	 				idx=0;
+	 				//角标工作
+	 				$banner2_ol_li.eq(idx).addClass('cur').siblings().removeClass('cur');
+	 				//图片工作
+	 				$banner2_ul.animate({left:'-'+$banner2_ol_li.length+'00%'}, 1000 , 'swing', function(e){
+	 					$banner2_ul.css({left:'-'+idx+'00%'});
+	 				});
+	 			}
+	 		});
+	 		//单击鼠标向前按钮时，播放上一张图片
+	 		$banner2_span.eq(0).bind('click',function(e){
+	 			if( $banner2_ul.is(':animated')==true ){
+	 				return;
+	 			}
+	 			idx--;
+	 			if(idx>=0){  //正常情况
+	 			//角标工作
+	 				$banner2_ol_li.eq(idx).addClass('cur').siblings().removeClass('cur');
+	 			//图片工作
+	 				$banner2_ul.animate({left:'-'+idx+'00%'},1000);
+	 			}else if(idx<0){
+	 				//角标工作
+	 				idx= $banner2_ol_li.length-1;
+	 				$banner2_ol_li.eq(idx).addClass('cur').siblings().removeClass('cur');
+	 				//图片工作
+	 				$banner2_ul.css({left:'-600%'}).animate({left:'-'+($banner2_ol_li.length-1)+'00%'},1000);
+	 			}
+	 		});
+	 		//角标事件，点击角标图标，对应index的图片为当前
+	 		$banner2_ol_li.bind('click',function(e){
+	 			if( $banner2_ul.is(':animated')==true ){
+	 				return;
+	 			}
+	 			if(idx==($banner2_ol_li.length-1) && $(this).index()==0){
+	 				$banner2_span.eq(1).click();
+	 			}else if(idx==0 && $(this).index()==( $banner2_ol_li.length-1) ){
+	 				$banner2_span.eq(0).click();
+	 			}else{
+	 				idx = $(this).index();
+	 				$(this).addClass('cur').siblings().removeClass('cur');
+	 				$banner2_ul.animate({left:'-'+idx+'00%'},1000);
+	 			}
+	 		});
+	 	})
+	 </script>
+</head>
+<body>
+	<div id="banner2">
+		<ul>
+			<li><a href=""><img src="images/focus2/1.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/focus2/2.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/focus2/3.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/focus2/4.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/focus2/5.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/focus2/6.jpg" alt=""></a></li>
+		</ul>
+		<ol>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+		<span>&lt;</span>
+		<span class="right-btn">&gt;</span>
+	</div>
+</body>
+</html>

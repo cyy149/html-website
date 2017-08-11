@@ -1,0 +1,84 @@
+/*common.css*/
+.topbox{
+	width: 100%;
+	background: #f9f9f9;
+	border-bottom: 1px solid #eee;
+	height: 30px;
+}
+.sec1170{		/*给所有的大的区块一个统一的样式*/
+	width: 1170px;
+	margin:0 auto;
+}
+.sec980{		/*列表页，详细页 给所有的大的区块一个统一的样式*/
+	width: 980px;
+	margin:0 auto;
+}
+
+.fr{
+	float: right;
+}
+.fl{
+	float: left;
+}
+/*------------项目中要用到颜色*/
+.c-orange{
+	color:#f76120; /*桔黄色*/
+}
+.c-blue{
+	color:#2bb8aa;/*蓝色：*/
+}
+.c-dgray{/*深灰色：*/
+	color:#333;
+}
+.c-gray{
+	color:#666 !important;/*灰色*/
+}
+.c-lgray{/*浅灰色：*/
+	color:#999 ;
+}
+/*----------项目中要用的边距*/
+.mb10{
+	margin-bottom:10px; 
+}
+.mb25{
+	margin-bottom: 25px;
+}
+.mr10{
+	margin-right: 10px;
+}
+.ml20{
+	margin-left: 20px;
+}
+/*----------项目中要用的字体大小*/
+.fs-14{
+	font-size: 14px;
+}
+
+.fs-16{
+	font-size: 16px;
+}
+.fs-32{
+	font-size: 32px;
+}
+}
+
+.t-lh{
+	text-decoration: line-through;
+}
+a{
+	color:#666;
+}
+a:hover{
+	color:#2bb8aa;
+}
+.clearfix{   /*用于清除父级元素因子元素浮动而产生的高度为0的情况 */
+	overflow: hidden;
+}
+.inline{	/*让一个元素变成行内块*/
+	display: inline-block;
+	vertical-align: top;
+}
+/*文字对齐*/
+.tc{
+	text-align: center;
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>侧边栏导航</title>
+	 <style>
+	 	*{margin:0;padding:0;}
+	 	body{
+	 		background-color: #f1f1f1;
+	 		padding-bottom: 500px;
+	 	}
+	 	ul{
+	 		list-style-type:none;
+	 	}
+	 	@font-face{
+	 		font-family:'icon';
+	 		src:url('css/font/iconfont.eot');
+	 		src: url('css/font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		    url('css/font/iconfont.woff') format('woff'), /* chrome、firefox */
+		    url('css/font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+		    url('css/font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+	 	}
+	 	.icon{
+	 		font-family: 'icon';
+	 	}
+	 	p{
+	 		width: 100%;
+	 		position:fixed;
+	 		left: 0;
+	 		top: 0;
+	 		text-align:center;
+	 	}
+	 	#favorite, #fashion, #life, #special, #sales, #guess{
+	 		width: 1190px;
+	 		height: 500px;
+	 		margin: 0 auto;
+	 		color:white;
+	 		font-size: 100px;
+	 	}
+	 	
+	 	#favorite{
+	 		background-color: #f40;
+	 		margin-top: 49px;
+	 	}
+	 	#fashion{
+	 		background-color: #ff3779;
+	 	}
+	 	#life{
+	 		background-color: #8d7afb
+	 	}
+	 	#special{
+	 		background-color: #bfc413;
+	 	}
+	 	#sales{
+	 		background-color: #ad849b;
+	 	}
+	 	#guess{
+	 		background-color: #ff4400;
+	 	}
+
+	 	#aside-nav{
+	 		width: 50px;
+	 		position:absolute;
+	 		top: 400px;
+	 		left: 50%;
+	 		margin-left: 600px;
+	 		background-color: #fff;
+	 		text-align:center;
+	 		font-size: 12px;
+	 	}
+	 	#aside-nav li{
+	 		width: 50px;
+	 		height: auto;
+	 		cursor:pointer;
+	 	}
+	 	#aside-nav li a{
+	 		display:block;
+	 		width: 34px;
+	 		height:33px;
+	 		margin:0 8px;
+	 		padding:8px 0;
+	 		border-bottom: 1px solid #eee;
+	 		font-weight: bold;
+	 		text-align:center;
+	 		text-decoration:none;
+	 		vertical-align:center;
+	 		line-height: 17px;
+	 	}
+	 	#aside-nav li.fashion a, #aside-nav li.special a, #aside-nav li.sales a, #aside-nav li.feedback a{
+			line-height: 34px;
+	 	}
+	 	#aside-nav li.feedback:hover, #aside-nav li.report:hover{
+	 		background-color: #f40;
+	 	}
+		#aside-nav .favorite a{
+			color:#ff4400;
+		}
+		#aside-nav .fashion a{
+			color:#ff3779;
+		}
+		#aside-nav .life a{
+			color:#8d7afb;
+		}
+		#aside-nav .special a{
+			color:#bfc413;
+		}
+		#aside-nav .sales a{
+			color:#ad849b;
+		}
+		#aside-nav .guess a{
+			color:#f40;
+		}
+		#aside-nav .favorite.active, #aside-nav .favorite.hover{
+			background:url('images/aside-nav/favorite.jpg');
+		} 
+		#aside-nav .favorite.active a, #aside-nav .favorite.hover a{
+			color:white;
+		}
+		#aside-nav .fashion.active, #aside-nav .fashion.hover{
+			background:url('images/aside-nav/fashion.jpg');
+		} 
+		#aside-nav .fashion.active a, #aside-nav .fashion.hover a{
+			color:white;
+		}
+		#aside-nav .life.active, #aside-nav .life.hover{
+			background:url('images/aside-nav/life.jpg');
+		} 
+		#aside-nav .life.active a, #aside-nav .life.hover a{
+			color:white;
+		}
+		#aside-nav .special.active, #aside-nav .special.hover{
+			background:url('images/aside-nav/special.jpg');
+		} 
+		#aside-nav .special.active a, #aside-nav .special.hover a{
+			color:white;
+		}
+		#aside-nav .sales.active, #aside-nav .sales.hover{
+			background:url('images/aside-nav/sales.jpg');
+		} 
+		#aside-nav .sales.active a, #aside-nav .sales.hover a{
+			color:white;
+		}
+		#aside-nav .guess.active, #aside-nav .guess.hover{
+			background:url('images/aside-nav/guess.jpg');
+		} 
+		#aside-nav .guess.active a, #aside-nav .guess.hover a{
+			color:white;
+		}
+		#aside-nav .active a, #aside-nav .hover a{
+			border-color:transparent;
+		}
+	 </style>
+	 <script src='jquery-1.11.3.min.js'></script>
+	 <script>
+	 	$(function(){
+	 		var aside_nav = $('#aside-nav');
+	 		var aside_nav_li = $('#aside-nav li');
+	 		var aside_nav_toTop = $('#aside-nav .toTop');
+	 		//当鼠标单击aside-nav下的li的时候，给他active类
+	 		aside_nav_li.bind('click',function(){
+	 			$(this).addClass('active').siblings().removeClass('active');
+	 		});
+	 		//当鼠标移到aside-nav的时候，给他一个hover类
+	 		aside_nav_li.hover(function(){
+	 			if( $(this).hasClass('active')==false ){
+	 				$(this).addClass('hover').css({opacity:0}).stop().animate({opacity:100},2000);
+	 			}
+	 		},function(){
+	 			$(this).removeClass('hover');
+	 		});
+
+	 		var aside_tops=[
+	 			$('#favorite').offset().top-49,
+	 			$('#fashion').offset().top-49,
+	 			$('#life').offset().top-49,
+	 			$('#special').offset().top-49,
+	 			$('#sales').offset().top-49,
+	 			$('#guess').offset().top-49,
+	 			0
+	 		];
+	 		//当侧边栏导航条滚动到搜索框下方时，他应该吸顶
+	 		var aside_nav_top = aside_nav.offset().top;
+	 		$(window).scroll(function(e){
+	 			if( $(window).scrollTop()>=aside_nav_top-49){
+	 				aside_nav.css({position:'fixed',top:49});
+	 			}else{
+	 				// $('#aside-nav').css({position:'absolute',top:$('#aside-nav').offset().top});
+	 				aside_nav.css({position:'absolute',top:aside_nav_top});
+	 			}
+	 			
+	 			//当窗口滚动的时候，如果上方隐藏的高度》=一屏的高度的时候，顶部应该显示
+	 			if( $(window).scrollTop()>=$(window).height() ){
+	 				aside_nav_toTop.show();
+	 			}else{
+	 				aside_nav_toTop.hide();
+	 			}
+			});
+	 		//当窗口滚动高度大于某一个块的文档定位高度时，该侧导航对应块高亮显示。
+	 		$(window).scroll(function(e){
+	 			var which;
+				for(var i = 0; i<aside_tops.length-1; i++ ){
+					if( $(window).scrollTop()>aside_tops[i] ){
+						which=i+1;
+					}
+				}
+				if(which==0){
+					$('#aside-nav>li').eq(which-1).addClass('active').siblings().removeClass('active');
+				}
+				$('#aside-nav>li').eq(which).addClass('active').siblings().removeClass('active');
+	 		});
+			//点击导航条那一块，文档就滚动到对应哪一块区域。
+	 		aside_nav_li.click(function(e){
+	 			var idx = $(this).index();
+	 			$('html,body').animate({
+	 				scrollTop:aside_tops[idx]},500);
+			});
+	 })
+
+	 </script>
+</head>
+<body>
+	<p><img src="images/aside-nav/search.jpg" alt=""></p>
+	<div id="favorite">我常逛的</div>
+	<div id="fashion">时尚</div>
+	<div id="life">品质生活</div>
+	<div id="special">特色</div>
+	<div id="sales">实惠</div>
+	<div id="guess">猜你喜欢</div>
+
+	<ul id="aside-nav">
+		<li class="favorite active">
+			<a href="###">我常逛的</a>
+		</li>
+		<li class="fashion">
+			<a href="###">时尚</a>
+		</li>
+		<li class="life">
+			<a href="###">品质生活</a>
+		</li>
+		<li class="special">
+			<a href="###">特色</a>
+		</li>
+		<li class="sales">
+			<a href="###">实惠</a>
+		</li>
+		<li class="guess">
+			<a href="###">猜你喜欢</a>
+		</li>
+		<li class="toTop">
+			<a href="###"><span class="icon">&#xe68c;</span><br>顶部</a>
+		</li>
+		<li class="feedback">
+			<a href="">反馈</a>
+		</li>
+		<li class="report">
+			<a href="">暴恐举报</a>
+		</li>
+	</ul>
+</body>
+</html>

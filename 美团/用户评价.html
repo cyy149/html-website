@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+
+	<style>
+	    /*-----------------------------------------------------整体评价情况-------------------------------*/
+		.remarktotal{
+			width: 700px;
+
+		}
+		.remarktotal div{
+			width: 28%;
+			display: inline-block;
+			vertical-align: top;
+			height: 138px;
+			margin-top:15px;
+			border-right: 1px solid #ddd;
+			padding-left: 30px;
+		}
+		.remarktotal div p{
+			margin: 10px 0;
+		}
+		.remark{
+			width: 700px;
+		}
+
+	    /*----------------------------------------------------用户印象-------------------------------*/
+	    .label{
+	    	width: 700px;
+	    	border:1px solid #ddd;
+	    	padding:20px 0;
+	    }
+		.label p {
+			height: 80px;
+			float: left;
+			margin-right: 20px;
+		}
+		.label div {
+
+		}
+		.label div  a{
+			display: inline-block;
+			padding:2px;
+			border:2px solid #f76120;
+			margin:2px 3px;
+			color:#f76120;
+		}
+
+	    /*----------------------------------------------------用户打分详情-------------------------------*/
+
+		h3.detailtitle{
+			height: 30px;
+			line-height: 30px;
+			border-bottom:2px solid #999;
+		}
+		.remark ul{
+			height: 30px;
+			line-height: 30px;
+			
+			background: #ccc;
+		}
+		.remark li{
+			float: left;
+			height: 30px;
+			padding: 0 20px;
+
+		}
+		.remark li.cur{
+			background: #eee;
+		}
+		.remarkitem{
+			position: relative;
+			border-bottom: 1px solid #ddd;
+		}
+		.remark .userinfo{
+			position: absolute;
+			top:5px;
+			left:25px;
+			width: 80px;
+			height: 80px;
+/*			background: red;*/
+		}
+		.remark .userinfo  img{
+			width: 55px;
+			height: 55px;
+			display: block;
+		}
+		.remarkinfo{
+			margin-left: 100px;
+		}
+		.remarkinfo p{
+			margin:15px 0;
+		}
+		.remarkinfotxt{
+			line-height: 15px;
+		}
+		.star-out{
+			background: url("images/star.png");
+			width: 60px;
+			height: 12px;
+			display: inline-block;
+		}
+		.star-in{
+			background: url("images/star-hover.png");
+			width: 30px;
+			height: 12px;
+			display: inline-block;
+		}
+		.icon-mark-out{ /*背景*/
+			background: #f76120;
+			width: 60px;
+			height: 12px;
+			display: inline-block;
+		}
+		.icon-mark-in{
+			background: yellow;
+			width: 40px;
+			height: 12px;
+			display: inline-block;
+		}
+		.bigstar .star-out{
+			background-size: 18px 18px;
+			width: 90px;
+			height: 18px;
+		}
+		.bigstar .star-in{
+			background-size: 18px 18px;
+			width: 45px;
+			height: 18px;
+		}
+	</style>
+</head>
+<body>
+	<img src="用户评价1.png" alt="">
+	<!-- 评价的整体情况 -->
+	<div class="remarktotal">
+		<h3 class="detailtitle">用户评价</h3>
+		<div>
+			<p><span class="c-orange fs-32">3.7分</span></p>
+			<p class="bigstar"><span class="star-out mr10"><span class="star-in"></span></span></p>
+			<p>共89评价</p>
+		</div>
+		<div>
+			<p>
+				口味
+			 		<span class="star-out mr10"><span class="star-in"></span></span>
+			 	4.3分
+			 </p>
+			<p>
+				口味
+			 		<span class="star-out mr10"><span class="star-in"></span></span>
+			 	4.3分
+			 </p>
+			<p>
+				口味
+			 		<span class="star-out mr10"><span class="star-in"></span></span>
+			 	4.3分
+			 </p>
+		</div>
+		<div style="border-right:none;">
+			<p>
+				5分
+			 		<span  class="icon-mark-out"><span class="icon-mark-in"></span></span> 
+			 	20人
+			 </p>
+			<p>
+				5分
+			 		<span  class="icon-mark-out"><span class="icon-mark-in"></span></span> 
+			 	20人
+			 </p>
+			 <p>
+				5分
+			 		<span  class="icon-mark-out"><span class="icon-mark-in"></span></span> 
+			 	20人
+			 </p>
+			 <p>
+				5分
+			 		<span  class="icon-mark-out"><span class="icon-mark-in"></span></span> 
+			 	20人
+			 </p>
+			 <p>
+				5分
+			 		<span  class="icon-mark-out"><span class="icon-mark-in"></span></span> 
+			 	20人
+			 </p>
+		</div>
+	</div>
+
+	<div class="label">
+		<p>大家都在说:</p>
+		<div>
+			<a href="">味道很好(83)</a>
+			<a href="">环境不错(41)</a>
+			<a href="">服务态度很好(27)</a>
+			<a href="">菜量足(8)</a>
+			<a href="">上菜快(7)</a>
+			<a href="">不用等位(4)</a>
+			<a href="">环境不错(41)</a>
+			<a href="">服务态度很好(27)</a>
+			<a href="">菜量足(8)</a>
+			<a href="">上菜快(7)</a>
+			<a href="">不用等位(4)</a>
+			<a href="">环境不错(41)</a>
+			<a href="">服务态度很好(27)</a>
+			<a href="">菜量足(8)</a>
+			<a href="">上菜快(7)</a>
+			<a href="">不用等位(4)</a>
+			<a href="">环境不错(41)</a>
+			<a href="">服务态度很好(27)</a>
+			<a href="">菜量足(8)</a>
+			<a href="">上菜快(7)</a>
+			<a href="" class="c-gray">1不用等位(4)</a>
+		</div>
+
+	</div>
+
+
+
+	<!-- 用户评价详细 -->
+	<div class="remark">
+		<h3 class="detailtitle">用户评价</h3>
+		<ul>
+			<li class="cur">全部</li>
+			<li>晒图评价</li>
+			<li><select name="" id="">
+				<option value="">选择1</option>
+				<option value="">选择1</option>
+			</select></li>
+		</ul>
+
+		<!-- 用户评价列表 -->
+		<div class="userremarklist">
+			<div class="remarkitem">
+				<div class="userinfo">
+					<img src="images/user2.png" alt="">
+					<span>用户名<i class="icon-user-grade">3等</i></span>
+				</div>
+				<div class="remarkinfo">
+					<p><span class="star-out mr10"><span class="star-in"></span></span>2016-9-27</p>
+					<p class="remarkinfotxt"><a class="c-orange" href=""><b>[认真评价]</b></a>先给送货小哥个好评！非常负责任！而且送货及时！ 再说蛋糕，造型没有图片上那么好看，但是也还可以，味道有人觉得一般般，有的人却觉得很好吃，众口难调吧，总之给小朋友过生日还是不错的选择。那些什么小孩儿的彩虹蛋糕，芭比娃娃蛋糕实在是不敢买啊，一眼望过去都是色素添加剂。 唯一不满意的是打电话说好了给两个生日帽，结果却只有一个，弄的一起过生日的两个小朋友不能照个一起戴帽子的合影，有点儿小遗憾</p>
+					<div class="imglist">
+						<a href=""><img width ="100" height = "100" src="images/review2-pic4.jpg" alt=""></a>
+						<a href=""><img width ="100" height = "100" src="images/review2-pic4.jpg" alt=""></a>
+						<a href=""><img width ="100" height = "100" src="images/review2-pic4.jpg" alt=""></a>
+					</div>
+					<p class="c-lgray">米旗BABY乐园儿童蛋糕</p>
+				</div>
+			</div>
+
+			<div class="remarkitem">
+				<div class="userinfo">
+					<img src="images/user2.png" alt="">
+					<span>用户名<i class="icon-user-grade">3等</i></span>
+				</div>
+				<div class="remarkinfo">
+					<p><span class="star-out mr10"><span class="star-in"></span></span>2016-9-27</p>
+					<p class="remarkinfotxt"><a class="c-orange" href=""><b>[认真评价]</b></a>先给送货小哥个好评！非常负责任！而且送货及时！ 再说蛋糕，造型没有图片上那么好看，但是也还可以，味道有人觉得一般般，有的人却觉得很好吃，众口难调吧，总之给小朋友过生日还是不错的选择。那些什么小孩儿的彩虹蛋糕，芭比娃娃蛋糕实在是不敢买啊，一眼望过去都是色素添加剂。 唯一不满意的是打电话说好了给两个生日帽，结果却只有一个，弄的一起过生日的两个小朋友不能照个一起戴帽子的合影，有点儿小遗憾</p>
+					<div class="imglist">
+						<a href=""><img width ="100" height = "100" src="images/review2-pic4.jpg" alt=""></a>
+						<a href=""><img width ="100" height = "100" src="images/review2-pic4.jpg" alt=""></a>
+						<a href=""><img width ="100" height = "100" src="images/review2-pic4.jpg" alt=""></a>
+					</div>
+					<p class="c-lgray">米旗BABY乐园儿童蛋糕</p>
+				</div>
+			</div>
+
+			<div class="remarkitem">
+				<div class="userinfo">
+					<img src="images/user2.png" alt="">
+					<span>用户名<i class="icon-user-grade">3等</i></span>
+				</div>
+				<div class="remarkinfo">
+					<p><span class="star-out mr10"><span class="star-in"></span></span>2016-9-27</p>
+					<p class="remarkinfotxt"><a class="c-orange" href=""><b>[认真评价]</b></a>先给送货小哥个好评！非常负责任！而且送货及时！ 再说蛋糕，造型没有图片上那么好看，但是也还可以，味道有人觉得一般般，有的人却觉得很好吃，众口难调吧，总之给小朋友过生日还是不错的选择。那些什么小孩儿的彩虹蛋糕，芭比娃娃蛋糕实在是不敢买啊，一眼望过去都是色素添加剂。 唯一不满意的是打电话说好了给两个生日帽，结果却只有一个，弄的一起过生日的两个小朋友不能照个一起戴帽子的合影，有点儿小遗憾</p>
+					<div class="imglist">
+						<a href=""><img width ="100" height = "100" src="images/review2-pic4.jpg" alt=""></a>
+						<a href=""><img width ="100" height = "100" src="images/review2-pic4.jpg" alt=""></a>
+						<a href=""><img width ="100" height = "100" src="images/review2-pic4.jpg" alt=""></a>
+					</div>
+					<p class="c-lgray">米旗BABY乐园儿童蛋糕</p>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</body>
+</html>
